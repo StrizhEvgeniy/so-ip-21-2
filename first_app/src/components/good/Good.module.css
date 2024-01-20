@@ -1,3 +1,8 @@
+.good {
+  width: 30%;
+  height: 30%;
+}
+
 .title {
   text-align: center;
 }
@@ -7,6 +12,12 @@
   height: 100px;
 }
 
+.imageContainer {
+  width: 100px;
+  margin: 0 auto;
+}
+
 .footer {
   display: flex;
+  justify-content: space-evenly;
 }
