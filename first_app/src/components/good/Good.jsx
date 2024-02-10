@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./Good.module.css";
 
-export default function Good(props) {
+export default function Good({ title, image, price, stock }) {
   // props - properties
   //React Element
-  const { title, image, price, stock } = props;
+  // const { title, image, price, stock } = props;
   return (
     <div className={styles.good}>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={image} alt="" />
+        <img className={styles.image} src={image} alt="dsfss" />
       </div>
       <div className={styles.footer}>
         <div className={styles.price}>{price}</div>

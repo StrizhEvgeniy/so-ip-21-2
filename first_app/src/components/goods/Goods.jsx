@@ -16,7 +16,6 @@ export default function Goods() {
         <Good
           key={good.id}
           title={good.title}
-          image={good.images[0]}
           price={good.price}
           stock={Math.floor(Math.random() * 10)}
         />
