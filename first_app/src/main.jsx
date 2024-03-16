@@ -2,5 +2,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Form from "./components/form/Form";
 import Row from "./Row";
+import Test from "./components/test/Test";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Row />);
+ReactDOM.createRoot(document.getElementById("root")).render(<Test />);
