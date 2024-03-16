@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Good from "../good/Good";
+import { useEffect, useState } from 'react';
+import Good from '../good/Good';
 
 export default function Goods() {
   const [goods, setGoods] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch('https://api.escuelajs.co/api/v1/products')
       .then((data) => data.json())
       .then((data) => setGoods(data));
   }, []);
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
       {goods.map((good) => (
         <Good
           key={good.id}

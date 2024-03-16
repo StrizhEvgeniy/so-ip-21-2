@@ -1,8 +1,9 @@
-import React from "react";
-import { DeleteOutlined } from "@ant-design/icons"; // { DeleteFilled }
+import { DeleteOutlined } from '@ant-design/icons'; // { DeleteFilled }
+import PropTypes from 'prop-types';
 
-export default function Post(props) {
-  const { title, body, deletePost, index } = props;
+export default function Post({
+  title, body, deletePost, index,
+}) {
   return (
     <div>
       <h2>{title}</h2>
@@ -11,3 +12,10 @@ export default function Post(props) {
     </div>
   );
 }
+
+Post.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+  deletePost: PropTypes.func,
+  index: PropTypes.number,
+};

@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import Button from "../button/Button";
+import { useState } from "react";
 
-export default function Todo() {
-  const [doneFlg, setDoneFlg] = useState(false);
-  const title = "Помыть пол";
-  const description = "Хорошо помыть пол";
+export default function Todo({ title, description, doneFlg }) {
+  const [isDone, setIsDone] = useState(doneFlg);
   return (
-    <div onMouseMove={(e) => console.log(e)} style={{ cursor: "pointer" }}>
+    <div
+      onMouseEnter={(e) => {
+        setIsDone(!isDone);
+      }}
+      style={{ cursor: "pointer" }}
+    >
       <h1
         style={{
-          textDecoration: doneFlg ? "line-through" : null,
-          color: doneFlg ? "grey" : null,
+          textDecoration: isDone ? "line-through" : null,
+          color: isDone ? "grey" : null,
         }}
       >
         {title}
       </h1>
       <div
         style={{
-          textDecoration: doneFlg ? "line-through" : null,
-          color: doneFlg ? "grey" : null,
+          textDecoration: isDone ? "line-through" : null,
+          color: isDone ? "grey" : null,
         }}
       >
         {description}

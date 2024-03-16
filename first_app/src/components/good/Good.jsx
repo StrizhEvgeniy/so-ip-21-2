@@ -1,9 +1,11 @@
-import React from "react";
-import styles from "./Good.module.css";
+import PropTypes from 'prop-types';
+import styles from './Good.module.css';
 
-export default function Good({ title, image, price, stock }) {
+export default function Good({
+  title, image, price, stock,
+}) {
   // props - properties
-  //React Element
+  // React Element
   // const { title, image, price, stock } = props;
   return (
     <div className={styles.good}>
@@ -13,8 +15,18 @@ export default function Good({ title, image, price, stock }) {
       </div>
       <div className={styles.footer}>
         <div className={styles.price}>{price}</div>
-        <div className={styles.stock}>В наличии {stock}</div>
+        <div className={styles.stock}>
+          В наличии
+          {stock}
+        </div>
       </div>
     </div>
   );
 }
+
+Good.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.number,
+  stock: PropTypes.number,
+};

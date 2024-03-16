@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Post from "../post/Post";
+import { useState } from "react";
 import { Input } from "antd";
+import Post from "../post/Post";
 
 export default function Form() {
   const [title, setTitle] = useState();
@@ -20,7 +20,7 @@ export default function Form() {
         <Input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          allowClear={true}
+          allowClear
           status={statusTitle}
         />
         <label htmlFor="">Body</label>
@@ -58,6 +58,7 @@ export default function Form() {
       <div>
         {posts.map(({ title, body }, index) => (
           <Post
+            key={index}
             title={title}
             body={body}
             deletePost={deletePost}
